@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellen e Advogados Associados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
           --cor-principal: #0a1f44;
@@ -229,9 +230,101 @@
           position: absolute;
           left: 0;
         }
+
+        /* Estilo para a Seção de FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .faq-pergunta {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px;
+            cursor: pointer;
+            position: relative;
+            color: var(--cor-principal);
+        }
+
+        .faq-pergunta::after {
+            content: '+';
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--cor-secundaria);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faq-item.active .faq-pergunta::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-resposta {
+            display: none;
+            padding: 0 15px 15px;
+            font-size: 1em;
+            color: var(--cor-texto);
+        }
+
+        /* Estilo para o botão flutuante no topo */
+        .main-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px;
+        }
+
+        .header-btn {
+            background: var(--cor-secundaria);
+            color: var(--cor-principal);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .header-btn:hover {
+            background-color: #d1b18d;
+        }
+
+        /* Estilo para os ícones de mídias sociais no rodapé */
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 2em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--cor-secundaria);
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
+
+<header class="main-header">
+    <a href="#contato" class="header-btn">Fale Conosco</a>
+</header>
 
 <section class="hero">
     <h1>Hellen e Advogados Associados</h1>
@@ -292,22 +385,45 @@
     </div>
 </section>
 
-
 <section id="depoimentos" class="section">
     <div class="container">
         <h2>O que nossos clientes dizem</h2>
         <div class="card-grid">
             <div class="card">
                 <blockquote>"O suporte e a clareza da Dra. Hellen foram essenciais para resolver meu caso de forma rápida e eficiente. Recomendo a todos."</blockquote>
-                <p><strong>- Maria S.</strong></p>
+                <p><strong>- Sebastião </strong></p>
             </div>
             <div class="card">
                 <blockquote>"A consultoria jurídica oferecida foi impecável, nos ajudando a navegar por questões complexas e a tomar as melhores decisões para a nossa empresa."</blockquote>
-                <p><strong>- Empresa XYZ</strong></p>
+                <p><strong> Jones </strong></p>
             </div>
             <div class="card">
                 <blockquote>"Encontrei no escritório um atendimento humanizado e um profundo conhecimento da área de direito de família. Me senti amparada do início ao fim."</blockquote>
-                <p><strong>- João P.</strong></p>
+                <p><strong>- Carlos</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="section">
+    <div class="container">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-pergunta">Onde estamos?</div>
+                <div class="faq-resposta">Rua Coronel Geraldo Rodrigues de Aguiar, nº30, sala 4, Centro ( Próximo à praça 28 de setembro ). Visconde do Rio Branco-MG</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pergunta">Como funciona a primeira consulta?</div>
+                <div class="faq-resposta">A primeira consulta é um momento para entender sua situação e fornecer uma orientação inicial. Podemos realizá-la de forma presencial ou online, de acordo com sua preferência.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pergunta">Vocês atendem em outras cidades?</div>
+                <div class="faq-resposta">Sim. Atendemos clientes de todo o Brasil de forma remota, utilizando ferramentas de videoconferência para garantir a mesma qualidade de serviço.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pergunta">Quais são as formas de pagamento?</div>
+                <div class="faq-resposta">Oferecemos diversas opções de pagamento, incluindo Pix, transferência bancária e cartão de crédito. Discutiremos as condições durante a consulta inicial.</div>
             </div>
         </div>
     </div>
@@ -316,7 +432,7 @@
 <section id="contato" class="section contact">
     <div class="container">
         <h2>Contato</h2>
-        <p>Agende uma consulta com nossa equipe de especialistas.</p>
+        <p>Agende uma consulta pelos contatos abaixo.</p>
         <div class="info">
             <div><strong>Telefone:</strong> (32) 99934-3700</div>
             <div><strong>E-mail:</strong> <a href="mailto:hellenmendoncaadv@gmail.com">hellenmendoncaadv@gmail.com</a></div>
@@ -328,7 +444,37 @@
 
 <footer>
     <p>&copy; 2025 Hellen Mendonça Advocacia & Consultoria Jurídica. Todos os direitos reservados.</p>
+    <div class="social-icons">
+        <a href="URL_DO_SEU_LINKEDIN" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="URL_DO_SEU_INSTAGRAM" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="URL_DO_SEU_FACEBOOK" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const pergunta = item.querySelector('.faq-pergunta');
+            pergunta.addEventListener('click', () => {
+                const resposta = item.querySelector('.faq-resposta');
+                const isActive = item.classList.toggle('active');
+
+                if (isActive) {
+                    resposta.style.display = 'block';
+                } else {
+                    resposta.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
