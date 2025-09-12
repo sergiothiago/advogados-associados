@@ -1,294 +1,284 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hellen e Advogados Associados</title>
-  <style>
-    :root {
-      --cor-principal: #0a1f44;
-      --cor-secundaria: #c99c56;
-      --cor-clara: #f8f9fa;
-      --cor-texto: #333;
-      --fonte-titulo: 'Georgia', serif;
-      --fonte-corpo: 'Arial', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellen e Advogados Associados</title>
+    <style>
+        :root {
+          --cor-principal: #0a1f44;
+          --cor-secundaria: #c99c56;
+          --cor-clara: #f8f9fa;
+          --cor-texto: #333;
+          --fonte-titulo: 'Georgia', serif;
+          --fonte-corpo: 'Arial', sans-serif;
+        }
 
-    body {
-      margin: 0;
-      font-family: var(--fonte-corpo);
-      line-height: 1.6;
-      background-color: var(--cor-clara);
-      color: var(--cor-texto);
-    }
+        body {
+          margin: 0;
+          font-family: var(--fonte-corpo);
+          line-height: 1.6;
+          background-color: var(--cor-clara);
+          color: var(--cor-texto);
+        }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px 0;
-    }
+        .container {
+          width: 90%;
+          max-width: 1200px;
+          margin: auto;
+          padding: 20px 0;
+        }
 
-    /* Hero */
-    .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/law-image.jpg') no-repeat center/cover;
-      background-attachment: fixed;
-      color: #fff;
-      text-align: center;
-      padding: 160px 20px;
-    }
+        /* Hero */
+        .hero {
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/law-image.jpg') no-repeat center/cover;
+          background-attachment: fixed;
+          color: #fff;
+          text-align: center;
+          padding: 160px 20px;
+        }
 
-    .hero h1 {
-      font-family: var(--fonte-titulo);
-      font-size: 4em;
-      margin: 0;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    }
+        .hero h1 {
+          font-family: var(--fonte-titulo);
+          font-size: 4em;
+          margin: 0;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
 
-    .hero p {
-      font-size: 1.4em;
-      margin-top: 15px;
-    }
+        .hero p {
+          font-size: 1.4em;
+          margin-top: 15px;
+        }
 
-    .btn {
-      display: inline-block;
-      background: var(--cor-secundaria);
-      color: var(--cor-principal);
-      padding: 14px 28px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 30px;
-      text-decoration: none;
-      transition: transform 0.3s, background-color 0.3s;
-    }
+        .btn {
+          display: inline-block;
+          background: var(--cor-secundaria);
+          color: var(--cor-principal);
+          padding: 14px 28px;
+          border-radius: 50px;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-top: 30px;
+          text-decoration: none;
+          transition: transform 0.3s, background-color 0.3s;
+        }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      background-color: #d1b18d;
-    }
+        .btn:hover {
+          transform: translateY(-3px);
+          background-color: #d1b18d;
+        }
 
-    /* Seções */
-    .section {
-      padding: 70px 0;
-      text-align: center;
-    }
+        /* Seções */
+        .section {
+          padding: 70px 0;
+          text-align: center;
+        }
 
-    .section h2 {
-      font-family: var(--fonte-titulo);
-      font-size: 2.6em;
-      color: var(--cor-principal);
-      margin-bottom: 25px;
-      position: relative;
-    }
+        .section h2 {
+          font-family: var(--fonte-titulo);
+          font-size: 2.6em;
+          color: var(--cor-principal);
+          margin-bottom: 25px;
+          position: relative;
+        }
 
-    .section h2::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: var(--cor-secundaria);
-      margin: 10px auto 0;
-    }
+        .section h2::after {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 3px;
+          background: var(--cor-secundaria);
+          margin: 10px auto 0;
+        }
 
-    .about p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 1.1em;
-    }
+        .about p {
+          max-width: 850px;
+          margin: auto;
+          font-size: 1.1em;
+        }
 
-    /* Cards de especialidades */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
+        /* Cards de especialidades */
+        .card-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
+        }
 
-    .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      border-left: 6px solid var(--cor-secundaria);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+        .card {
+          background: #fff;
+          padding: 25px;
+          border-radius: 12px;
+          border-left: 6px solid var(--cor-secundaria);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-    }
+        .card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
 
-    /* Seção Parallax */
-    .parallax {
-      background: url('img/paralax.jpg') no-repeat center/cover;
-      background-attachment: fixed;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px;
-      font-size: 1.6em;
-      font-style: italic;
-    }
+        /* Seção Parallax */
+        .parallax {
+          background: url('img/paralax.jpg') no-repeat center/cover;
+          background-attachment: fixed;
+          color: #fff;
+          text-align: center;
+          padding: 120px 20px;
+          font-size: 1.6em;
+          font-style: italic;
+        }
 
-    /* Estilo do card da Dra Hellen */
-	.adv-card {
-	  background: #fff;
-	  border-radius: 12px;
-	  padding: 20px;
-	  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-	  text-align: center;
-	  transition: transform 0.3s, box-shadow 0.3s;
-	  max-width: 350px;
-	  margin: auto;
-	}
+        /* Estilo do card da Dra Hellen */
+        .adv-card {
+          background: #fff;
+          border-radius: 12px;
+          padding: 20px;
+          box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+          text-align: center;
+          transition: transform 0.3s, box-shadow 0.3s;
+          max-width: 350px;
+          margin: auto;
+        }
 
-	.adv-card:hover {
-	  transform: translateY(-5px);
-	  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-	}
+        .adv-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
 
-	.adv-card img {
-	  width: 100%;
-	  border-radius: 12px;
-	  margin-bottom: 15px;
-	}
+        .adv-card img {
+          width: 100%;
+          border-radius: 12px;
+          margin-bottom: 15px;
+        }
 
-	.adv-card h3 {
-	  margin: 10px 0 5px;
-	  color: var(--cor-principal);
-	  font-family: var(--fonte-titulo);
-	}
+        .adv-card h3 {
+          margin: 10px 0 5px;
+          color: var(--cor-principal);
+          font-family: var(--fonte-titulo);
+        }
 
-	.adv-card p {
-	  margin: 5px 0;
-	  color: var(--cor-secundaria);
-	  font-weight: bold;
-	}
+        .adv-card p {
+          margin: 5px 0;
+          color: var(--cor-secundaria);
+          font-weight: bold;
+        }
 
-	.adv-card blockquote {
-	  font-style: italic;
-	  color: #555;
-	  margin-top: 10px;
-	}
+        .adv-card blockquote {
+          font-style: italic;
+          color: #555;
+          margin-top: 10px;
+        }
 
-    /* Contato */
-    .contact {
-      background: var(--cor-principal);
-      color: #fff;
-    }
+        /* Contato */
+        .contact {
+          background: var(--cor-principal);
+          color: #fff;
+        }
 
-    .contact .info {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
+        .contact .info {
+          display: flex;
+          justify-content: center;
+          gap: 50px;
+          flex-wrap: wrap;
+          margin-top: 30px;
+        }
 
-    .contact .info a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+        .contact .info a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s;
+        }
 
-    .contact .info a:hover {
-      color: var(--cor-secundaria);
-    }
+        .contact .info a:hover {
+          color: var(--cor-secundaria);
+        }
 
-    footer {
-      background: #1a1a1a;
-      color: #aaa;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.9em;
-    }
-  </style>
+        /* Estilo do footer com cor sólida marrom */
+        footer {
+            background-color: #111;
+            padding: 40px 20px;
+            text-align: center;
+            color: #fff; /* Cor do texto no footer */
+        }
+
+    </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <section class="hero">
+<section class="hero">
     <h1>Hellen e Advogados Associados</h1>
     <p>Excelência jurídica aliada a compromisso humano.</p>
     <a href="#contato" class="btn">Fale Conosco</a>
-  </section>
+</section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="section about">
+<section id="sobre" class="section about">
     <div class="container">
-      <h2>Nosso Escritório</h2>
-      <p>Fundado pela Dra. Hellen, o escritório atua com ética, dedicação e foco nos resultados. Nosso diferencial está no atendimento humanizado e na construção de soluções jurídicas personalizadas para cada cliente.</p>
+        <h2>Nosso Escritório</h2>
+        <p>Fundado pela Dra. Hellen, o escritório atua com ética, dedicação e foco nos resultados. Nosso diferencial está no atendimento humanizado e na construção de soluções jurídicas personalizadas para cada cliente.</p>
     </div>
-  </section>
+</section>
 
-  <!-- Especialidades -->
-  <section id="especialidades" class="section">
+<section id="especialidades" class="section">
     <div class="container">
-      <h2>Áreas de Atuação</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Direito Civil</h3>
-          <p>Família, contratos, inventários, responsabilidade civil e direitos do consumidor.</p>
+        <h2>Áreas de Atuação</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Direito Civil</h3>
+                <p>Família, contratos, inventários, responsabilidade civil e direitos do consumidor.</p>
+            </div>
+            <div class="card">
+                <h3>Direito Trabalhista</h3>
+                <p>Defesa de trabalhadores e empresas em ações, consultoria preventiva e negociações.</p>
+            </div>
+            <div class="card">
+                <h3>Direito Empresarial</h3>
+                <p>Planejamento, constituição e consultoria completa para empresas e startups.</p>
+            </div>
+            <div class="card">
+                <h3>Direito das Pessoas com TEA</h3>
+                <p>Defesa e garantia dos direitos das pessoas com Transtorno do Espectro Autista, assegurando inclusão, saúde e educação de qualidade.</p>
+            </div>
         </div>
-        <div class="card">
-          <h3>Direito Trabalhista</h3>
-          <p>Defesa de trabalhadores e empresas em ações, consultoria preventiva e negociações.</p>
-        </div>
-        <div class="card">
-          <h3>Direito Empresarial</h3>
-          <p>Planejamento, constituição e consultoria completa para empresas e startups.</p>
-        </div>
-        <div class="card">
-          <h3>Direito das Pessoas com TEA</h3>
-          <p>Defesa e garantia dos direitos das pessoas com Transtorno do Espectro Autista, assegurando inclusão, saúde e educação de qualidade.</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Frase Inspiradora -->
-  <section class="parallax">
+<section class="parallax">
     <p>"A justiça é o pilar que sustenta a sociedade e guia nossos passos."</p>
-  </section>
+</section>
 
-	<!-- Equipe -->
-	<section id="equipe" class="section">
-	  <div class="container">
-		<h2>Nossa Equipe</h2>
-		<p>Conheça a fundadora do escritório:</p>
-		<div class="adv-card">
-		  <img src="img/advogada.png" alt="Advogada Dra. Hellen">
-		  <h3>Dra. Hellen Mendonça</h3>
-		  <p><strong>OAB/MG 241.219</strong></p>
-		  <blockquote>"Mais do que advogar, meu propósito é ser parceira dos clientes em cada desafio jurídico, oferecendo segurança, clareza e resultados em diferentes áreas do direito."</blockquote>
-		</div>
-	  </div>
-	</section>
-
-
-  <!-- Contato (mantido igual ao original) -->
-  <section id="contato" class="section contact">
+<section id="equipe" class="section">
     <div class="container">
-      <h2>Contato</h2>
-      <p>Agende uma consulta com nossa equipe de especialistas.</p>
-      <div class="info">
-        <div><strong>Telefone:</strong> (32) 99934-3700</div>
-        <div><strong>E-mail:</strong> <a href="mailto:hellenmendoncaadv@gmail.com">hellenmendoncaadv@gmail.com</a></div>
-        <div><strong>WhatsApp:</strong> <a href="https://wa.me/5532999343700" target="_blank">Enviar mensagem</a></div>
-      </div>
+        <h2>Nossa Equipe</h2>
+        <p>Conheça a fundadora do escritório:</p>
+        <div class="adv-card">
+            <img src="img/advogada.png" alt="Advogada Dra. Hellen">
+            <h3>Dra. Hellen Mendonça</h3>
+            <p><strong>OAB/MG 241.219</strong></p>
+            <blockquote>"Mais do que advogar, meu propósito é ser parceira dos clientes em cada desafio jurídico, oferecendo segurança, clareza e resultados em diferentes áreas do direito."</blockquote>
+        </div>
     </div>
-  </section>
+</section>
 
 
-  
-	  <!-- Footer -->
-	<footer style="background: #111; padding: 40px 20px; text-align: center; color: #fff;">
-	  <img src="img/logo.jpeg" alt="Logo Hellen Mendonça" style="max-width: 200px; height: auto; margin-bottom: 15px;">
-	  <p>&copy; 2025 Hellen Mendonça Advocacia & Consultoria Jurídica. Todos os direitos reservados.</p>
-	</footer>
+<section id="contato" class="section contact">
+    <div class="container">
+        <h2>Contato</h2>
+        <p>Agende uma consulta com nossa equipe de especialistas.</p>
+        <div class="info">
+            <div><strong>Telefone:</strong> (32) 99934-3700</div>
+            <div><strong>E-mail:</strong> <a href="mailto:hellenmendoncaadv@gmail.com">hellenmendoncaadv@gmail.com</a></div>
+            <div><strong>WhatsApp:</strong> <a href="https://wa.me/5532999343700" target="_blank">Enviar mensagem</a></div>
+        </div>
+    </div>
+</section>
 
 
+<footer>
+    <p>&copy; 2025 Hellen Mendonça Advocacia & Consultoria Jurídica. Todos os direitos reservados.</p>
+</footer>
 
 </body>
 </html>
